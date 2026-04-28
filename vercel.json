@@ -1,9 +1,8 @@
-{
+﻿{
   "version": 2,
+  "rootDirectory": "js",
   "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "framework": null
 }
