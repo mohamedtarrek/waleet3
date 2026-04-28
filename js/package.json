@@ -1,0 +1,36 @@
+{
+    "name": "root",
+    "private": true,
+    "packageManager": "pnpm@10.30.0",
+    "scripts": {
+        "build": "turbo run build",
+        "check-types": "turbo run check-types",
+        "clean": "turbo run clean",
+        "format:check": "prettier . --check --cache",
+        "format:fix": "prettier . --write",
+        "lint:check": "eslint . --ext .cjs,.cts,.js,.mjs,.mts,.ts,.tsx",
+        "lint:fix": "eslint . --ext .cjs,.cts,.js,.mjs,.mts,.ts,.tsx --fix",
+        "publish-packages": "pnpm build && pnpm changeset publish --access public --no-git-checks",
+        "test": "vitest",
+        "test:coverage": "vitest run --coverage.enabled"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.29.8",
+        "@eslint/js": "^10.0.1",
+        "@types/node": "20.19.0",
+        "@types/node-fetch": "^2.6.1",
+        "@typescript-eslint/eslint-plugin": "^8.56.1",
+        "@typescript-eslint/parser": "^8.56.1",
+        "@vitest/coverage-v8": "^4.1.0",
+        "eslint": "^10.2.0",
+        "eslint-plugin-simple-import-sort": "^12.1.0",
+        "jsdom": "^29.0.1",
+        "prettier": "3.8.1",
+        "shx": "^0.4.0",
+        "tsdown": "^0.21.2",
+        "turbo": "^2.8.10",
+        "typescript": "~5.6.3",
+        "typescript-esm": "^2.0.0",
+        "vitest": "^4.0.17"
+    }
+}
